@@ -1,16 +1,9 @@
-import { useState, useEffect } from "react"
-
 export default function App() {
-  const [state, setState] = useState("")
-  // cannot use async await
-  useEffect(() => {
-    const fetch = async () => {
-      await fetch("https://fakestoreapi.com/products").then((res) =>
-        setState(res).catch((err) => console.log(err))
-      )
-    }
-    fetch()
-  }, [])
-
-  return <div>{JSON.stringify(state)}</div>
+  return (
+    <div>
+      {/* Try changing bg and hit save.. changes are seen *after* I  reload the page which not what I want :( ) */}
+      <button className="bg-[#F70000]">HI THERE</button>
+      <p>INFO- OS : windows 10 Home, Node version 12.18.4 tailwind : latest</p>
+    </div>
+  )
 }
